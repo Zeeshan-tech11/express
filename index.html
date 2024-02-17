@@ -6,6 +6,14 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Express html content</h1>
+    <h1 id="iu">Express html content</h1>
+    <script>
+      console.log("script loaded");
+      async function getdata() {
+        const res = await fetch("http://localhost:3000", { method: "post" });
+        document.getElementById("iu").innerText = "ka haal chaal ba";
+      }
+      getdata();
+    </script>
   </body>
 </html>
